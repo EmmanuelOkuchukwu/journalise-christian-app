@@ -1,0 +1,18 @@
+// For normal text font
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap');
+
+// For h tags heading
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+$breakpoint-xs: 480px !default;
+$breakpoint-sm: 576px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 992px !default;
+$breakpoint-xl: 1200px !default;
+
+$backgroundColor: #f1f1f1;
+$textColor: #262626;
+$borderColor: #dbdbdb;
+$textFont: 'Encode Sans SC', sans-serif;
+$headingFont: 'Staatliches', cursive;
+

@@ -1,0 +1,72 @@
+@import 'app';
+
+.register-container {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+.register-background {
+  width: 350px;
+  height: 550px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid $borderColor;
+}
+
+.register-form {
+  width: 100%;
+  padding: 40px;
+}
+
+.register-title {
+  border-bottom: 1px solid $borderColor;
+  padding-bottom: 20px;
+}
+
+.input-form {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.text-field {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #262626;
+  background-color: #dbdbdb;
+}
+
+.btn-register {
+  width: 100%;
+  margin: 15px 0;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid $borderColor;
+  cursor: pointer;
+  &:hover {
+    background-color: $borderColor;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.login-link {
+  border-top: 1px solid $borderColor;
+}
+
+.btn-login {
+  width: 100%;
+  margin: 15px 0;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid $borderColor;
+  cursor: pointer;
+  &:hover {
+    background-color: $borderColor;
+    transition: all 0.2s ease-in-out;
+  }
+}

@@ -1,0 +1,50 @@
+@import 'app';
+
+.home-container {}
+
+.banner {
+  margin: 90px 0;
+  width: 100%;
+  height: 300px;
+}
+
+.img-banner {
+  width: 100%;
+  height: 100%;
+}
+
+.card-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  border: 1px solid $borderColor;
+  height: 460px;
+  background-color: #fff;
+  margin: 0 10px;
+  border-radius: 4px;
+ }
+
+.img-card {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 0 10px;
+}
+
+.info-btn {
+  border: 1px solid $borderColor;
+  border-radius: 4px;
+  padding: 7px;
+  width: 100px;
+  cursor: pointer;
+  &:hover {
+    background-color: $borderColor;
+    transition: all 0.2s ease-in-out;
+  }
+}
