@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import '../scss/profile.scss';
 import { AuthService } from '../../services/AuthenticationService';
-import {PostService} from "../../services/PostService";
+import { PostService } from '../../services/PostService';
+import CreatePost from './CreatePost';
 
 const Profile = () => {
     const [userInfo, setUserInfo] = useState(null);
@@ -66,6 +67,9 @@ const Profile = () => {
                         <p>Name: {userInfo?.user?.name}</p>
                         <p>Email: {userInfo?.user?.email}</p>
                         <p>Denomination: {userInfo?.user?.denomination}</p>
+                    </div>
+                    <div className="create-post">
+                        <CreatePost />
                     </div>
                 </div>
                 <div className="post-section">

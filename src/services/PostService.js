@@ -25,7 +25,30 @@ function onDeletePost(id) {
         .catch(error => console.log(error));
 }
 
+function onCreatePost(formData) {
+    const AuthorizationHeader = AuthHeader();
+    AuthorizationHeader['Content-Type'] = 'application/json';
+    return axios.post('/createpost', formData,{
+        headers: AuthorizationHeader
+    })
+        .then((response) => {
+            return response;
+        })
+        .catch((error) => console.log(error));
+}
+
+function onUploadImage(data) {
+    return axios.post('https://api.cloudinary.com/v1_1/emmanuel-cloud-storage/image/upload', data)
+        .then((response) => {
+            console.log('Uploaded Image: ', response.data)
+            return response.data;
+        })
+        .catch(error => console.log(error));
+}
+
 export const PostService = {
     getMyPosts,
-    onDeletePost
+    onDeletePost,
+    onCreatePost,
+    onUploadImage
 }

@@ -20,7 +20,7 @@ const Register = ({ history }) => {
         AuthService.onRegister(formData)
             .then((results) => {
                 setMessage(results.message);
-                // history.push('/login');
+                history.push('/login');
             })
             .catch((err) => {
                 setMessage(err.message)
