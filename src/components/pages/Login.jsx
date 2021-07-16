@@ -7,17 +7,21 @@ const Login = ({ history, userInfo }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleLogin = (evt) => {
+        setIsLoading(true);
         evt.preventDefault();
         AuthService.onLogin(email, password)
             .then((result) => {
                 console.log(result);
                 setMessage(result.message);
+                setIsLoading(false);
             })
             .catch((err) => {
                 setMessage(err.message);
                 console.log(err);
+                setIsLoading(false);
             })
     }
     if(AuthService.currentUserValue) {
@@ -35,7 +39,7 @@ const Login = ({ history, userInfo }) => {
                     <div className="input-form">
                         <label>Password</label><input className="text-field" type="password" name="password" value={password} onChange={(evt) => setPassword(evt.target.value)} placeholder="XXXXXXXXXXXX" />
                     </div>
-                    <input type="submit" className="btn-login" value="Login" />
+                    <input type="submit" className="btn-login" disabled={isLoading} value={!isLoading ? 'Login' : 'Loading...'} />
                     <a href="" className="forg-link">Forgot Password?</a><br /><br />
                     <div className="register-link">
                         <p>Need an Account?</p>
