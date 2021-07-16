@@ -15,6 +15,7 @@ const Navbar = ({ history, userInfo }) => {
                 <ul className="unordered-list">
                     {userInfo ? <li><a href="/" onClick={handleLogout}>logout</a></li> : <li><a href="/login">Login</a></li>}
                     {!userInfo ? <li><a href="/register">Register</a></li> : ''}
+                    {userInfo ? <li><a href="/profile">{userInfo?.user?.name}</a></li> : ''}
                     {/*<li><a href=""></a></li>*/}
                 </ul>
             </nav>

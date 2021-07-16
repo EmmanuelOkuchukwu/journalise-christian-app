@@ -32,23 +32,13 @@ function onCreatePost(formData) {
         headers: AuthorizationHeader
     })
         .then((response) => {
-            return response;
-        })
-        .catch((error) => console.log(error));
-}
-
-function onUploadImage(data) {
-    return axios.post('https://api.cloudinary.com/v1_1/emmanuel-cloud-storage/image/upload', data)
-        .then((response) => {
-            console.log('Uploaded Image: ', response.data)
             return response.data;
         })
-        .catch(error => console.log(error));
+        .catch((error) => console.log(error));
 }
 
 export const PostService = {
     getMyPosts,
     onDeletePost,
-    onCreatePost,
-    onUploadImage
+    onCreatePost
 }

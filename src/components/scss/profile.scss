@@ -68,8 +68,8 @@
 }
 
 .post-section {
-  background-color: #fff;
-  height: 600px;
+  border-left: 1px solid $borderColor;
+  height: 100%;
   width: 70%;
   display: flex;
   flex-wrap: wrap;
@@ -77,10 +77,11 @@
 }
 
 .post-card {
-  width: 50%;
+  width: 48%;
   border: 1px solid $borderColor;
-  height: 300px;
+  height: 100%;
   border-radius: 4px;
+  margin: 5px;
 }
 
 .post-card-header {
@@ -98,4 +99,19 @@
   height: auto;
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .profile-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .user-info-section {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .post-section {
+    width: 100%;
+    padding: 0 20px;
+  }
 }

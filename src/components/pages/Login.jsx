@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../scss/login.scss';
 import { AuthService } from '../../services/AuthenticationService';
+import { Redirect } from 'react-router-dom';
 
 const Login = ({ history, userInfo }) => {
     const [email, setEmail] = useState('');
@@ -13,12 +14,14 @@ const Login = ({ history, userInfo }) => {
             .then((result) => {
                 console.log(result);
                 setMessage(result.message);
-                history.push('/profile');
             })
             .catch((err) => {
                 setMessage(err.message);
                 console.log(err);
             })
+    }
+    if(AuthService.currentUserValue) {
+        return <Redirect to={{ pathname: '/profile' }} />;
     }
     return (
         <div className="login-container">
