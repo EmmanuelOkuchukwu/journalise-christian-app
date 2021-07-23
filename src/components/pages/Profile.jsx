@@ -62,7 +62,7 @@ const Profile = () => {
             </div>
             <nav className="profile-nav">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/feed">Main Feed</a></li>
                     <li><a href="">Add New Prayer</a></li>
                     <li><a href="">Prayer Requests</a></li>

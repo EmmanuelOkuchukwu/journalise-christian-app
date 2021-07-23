@@ -15,6 +15,7 @@ const Home = () => {
                 <div className="card">
                     <img className="img-card" src={Dashboard} alt="Dashboard" width="600" height="400" />
                     <div className="card-body">
+                        <h2>Profile</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque eos et exercitationem laudantium nam nihil, nulla obcaecati placeat repellendus sed soluta. Accusamus expedita itaque natus omnis perferendis saepe voluptatum.</p>
                         <button className="info-btn">Visit Now!</button>
                     </div>
@@ -22,6 +23,7 @@ const Home = () => {
                 <div className="card">
                     <img className="img-card" src={PrayerTime} alt="Dashboard" width="600" height="400" />
                     <div className="card-body">
+                        <h2>Prayer Requests</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque eos et exercitationem laudantium nam nihil, nulla obcaecati placeat repellendus sed soluta. Accusamus expedita itaque natus omnis perferendis saepe voluptatum.</p>
                         <button className="info-btn">Visit Now!</button>
                     </div>
@@ -29,6 +31,7 @@ const Home = () => {
                 <div className="card">
                     <img className="img-card" src={Connect} alt="Dashboard" width="600" height="400" />
                     <div className="card-body">
+                        <h2>Learn More</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque eos et exercitationem laudantium nam nihil, nulla obcaecati placeat repellendus sed soluta. Accusamus expedita itaque natus omnis perferendis saepe voluptatum.</p>
                         <button className="info-btn">Visit Now!</button>
                     </div>
