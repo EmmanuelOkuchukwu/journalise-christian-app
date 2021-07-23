@@ -25,7 +25,7 @@ const Login = ({ history, userInfo }) => {
             })
     }
     if(AuthService.currentUserValue) {
-        return <Redirect to={{ pathname: '/profile' }} />;
+        return <Redirect to={{ pathname: '/feed' }} />;
     }
     return (
         <div className="login-container">
