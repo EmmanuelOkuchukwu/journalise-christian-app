@@ -36,12 +36,12 @@ const Profile = () => {
         PostService.onDeletePost(id)
             .then((result) => {
                 if(result) {
-                    const deletePost = posts?.mypost?.filter(post => {
-                        return post._id !== result._id
+                    const deletePost = result?.mypost?.filter(post => {
+                        return post._id !== id
                     })
-                    setPosts(deletePost)
+                    setPosts(deletePost);
                 } else {
-                    return null
+                    return null;
                 }
             })
     }
@@ -63,8 +63,8 @@ const Profile = () => {
             <nav className="profile-nav">
                 <ul>
                     <li><a href="">Home</a></li>
-                    <li><a href="">Main Feed</a></li>
-                    <li><a href="">Add New Post</a></li>
+                    <li><a href="/feed">Main Feed</a></li>
+                    <li><a href="">Add New Prayer</a></li>
                     <li><a href="">Prayer Requests</a></li>
                 </ul>
             </nav>

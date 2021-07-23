@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import Profile from './components/pages/Profile';
+import Feed from './components/pages/Feed';
 import { AuthService } from './services/AuthenticationService';
 import { PrivateRoute } from './PrivateRoute';
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
         <PrivateRoute path='/profile' component={Profile} />
+        <PrivateRoute path='/feed' component={Feed} />
       </Switch>
     </div>
   );

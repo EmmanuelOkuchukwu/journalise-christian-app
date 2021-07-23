@@ -1,6 +1,18 @@
 import axios from 'axios';
 import AuthHeader from "../AuthHeader";
 
+function getAllPosts() {
+    return axios.get('/allpost')
+        .then((response) => {
+            if(response.status === 200) {
+                return response.data;
+            } else if(response.status === 422) {
+                return null;
+            }
+        })
+        .catch(error => console.log(error));
+}
+
 function getMyPosts() {
     return axios.get('/mypost', {
         headers: AuthHeader()
@@ -38,6 +50,7 @@ function onCreatePost(formData) {
 }
 
 export const PostService = {
+    getAllPosts,
     getMyPosts,
     onDeletePost,
     onCreatePost

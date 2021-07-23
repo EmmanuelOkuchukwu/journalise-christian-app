@@ -16,3 +16,9 @@ $borderColor: #dbdbdb;
 $textFont: 'Encode Sans SC', sans-serif;
 $headingFont: 'Staatliches', cursive;
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
