@@ -1,8 +1,17 @@
 @import 'app';
 
 .feed {
+  margin: 100px 0;
+}
+
+.feed-heading {
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 0 auto;
+}
+
+.feed-section {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feed-card {
