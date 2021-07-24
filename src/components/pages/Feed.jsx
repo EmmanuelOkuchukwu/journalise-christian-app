@@ -47,7 +47,7 @@ const Feed = () => {
                     <div className="feed-card">
                         <div className="flex-header">
                             <h3>{post?.title}</h3>
-                            {!userInfo && <i className="fas fa-trash" onClick={() => handleDelete(post._id)} />}
+                            {post.postedBy._id === userInfo.user._id && <i className="fas fa-trash" onClick={() => handleDelete(post._id)} />}
                         </div>
                         <img src={post?.photo} alt="" className="img-post" />
                     </div>
