@@ -67,6 +67,24 @@
   margin: 0 40px;
 }
 
+.account-settings-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-btn {
+  border: solid 1px $borderColor;
+  width: 130px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  &:hover {
+    background-color: $borderColor;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
 .post-section {
   border-left: 1px solid $borderColor;
   height: 100%;

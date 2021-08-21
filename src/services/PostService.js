@@ -49,9 +49,15 @@ function onCreatePost(formData) {
         .catch((error) => console.log(error));
 }
 
+function onLike() {}
+
+function onComment() {}
+
 export const PostService = {
     getAllPosts,
     getMyPosts,
     onDeletePost,
-    onCreatePost
+    onCreatePost,
+    onLike,
+    onComment
 }

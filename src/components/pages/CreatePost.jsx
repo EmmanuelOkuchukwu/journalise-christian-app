@@ -12,8 +12,8 @@ const CreatePost = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = evt => {
-        const { name, value } = evt.target;
-        setPosts({ ...posts, [name]: value });
+        const { name } = evt.target;
+        setPosts({ ...posts, [name]: evt.target.value });
     }
 
     const submitPost = (evt) => {
@@ -28,9 +28,9 @@ const CreatePost = () => {
             .then((success) => {
                 console.log(success);
                 setPosts({
-                    title: success.title,
-                    body: success.body,
-                    pic: success.url
+                    title: posts.title,
+                    body: posts.body,
+                    pic: posts.url
                 })
                 setIsLoading(false);
             })

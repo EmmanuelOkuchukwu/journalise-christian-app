@@ -4,8 +4,10 @@ import Dashboard from '../assets/speed-4028234_1920.jpg';
 import PrayerTime from '../assets/prayer-1308663_1920.jpg';
 import Connect from '../assets/contact-us-2993000_1920.jpg';
 import '../scss/home.scss';
+import { useHistory } from 'react-router-dom';
 
 const Home = () => {
+    const history = useHistory();
     return (
         <div className="home-container">
             <div className="banner">
@@ -25,15 +27,15 @@ const Home = () => {
                     <div className="card-body">
                         <h2>Prayer Requests</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque eos et exercitationem laudantium nam nihil, nulla obcaecati placeat repellendus sed soluta. Accusamus expedita itaque natus omnis perferendis saepe voluptatum.</p>
-                        <button className="info-btn">Visit Now!</button>
+                        <button className="info-btn">Visit Now!</button><br />
                     </div>
                 </div>
                 <div className="card">
                     <img className="img-card" src={Connect} alt="Dashboard" width="600" height="400" />
                     <div className="card-body">
-                        <h2>Learn More</h2>
+                        <h2>Main Feed</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque eos et exercitationem laudantium nam nihil, nulla obcaecati placeat repellendus sed soluta. Accusamus expedita itaque natus omnis perferendis saepe voluptatum.</p>
-                        <button className="info-btn">Visit Now!</button>
+                        <button className="info-btn" onClick={() => history.push('/feed')}>Visit Now!</button><br />
                     </div>
                 </div>
             </div>

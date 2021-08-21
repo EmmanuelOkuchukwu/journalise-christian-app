@@ -75,6 +75,11 @@ const Profile = () => {
                         <p>Name: {userInfo?.user?.name}</p>
                         <p>Email: {userInfo?.user?.email}</p>
                         <p>Denomination: {userInfo?.user?.denomination}</p>
+                        <hr />
+                        <div className="account-settings-btn">
+                            <button className="settings-btn">Edit Account</button>
+                            <button className="settings-btn">Delete Account</button>
+                        </div>
                     </div>
                     <div className="create-post">
                         <CreatePost />

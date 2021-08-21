@@ -35,11 +35,29 @@ const Feed = () => {
 
     function handleDelete(id) {
         PostService.onDeletePost(id)
+            .then(res => res.data)
             .then((result) => {
                 console.log(result);
+                const deletePost = posts?.posts?.filter(post => {
+                    return post._id !== result._id
+                })
+                setPosts(deletePost)
             })
             .catch((error) => console.log(error));
     }
+
+    const displayPosts = posts?.posts?.length > 0 ? posts?.posts?.map(post => (
+        <div className="post-stack" key={post?._id}>
+            <div className="feed-card">
+                <div className="flex-header">
+                    <h3>{post?.title}</h3>
+                    {post.postedBy._id === userInfo.user._id && <i className="fas fa-trash" onClick={() => handleDelete(post._id)} />}
+                </div>
+                <img src={post?.photo} alt="" className="img-post" />
+                <p>{post?.body}</p>
+            </div>
+        </div>
+    )): <span>No posts found here</span>
 
     return (
         <div className="feed">
@@ -49,18 +67,7 @@ const Feed = () => {
             </div>
             {isLoading ?
                 <div className="feed-section">
-                    {posts?.posts?.length > 0 ? posts?.posts?.map(post => (
-                        <div className="post-stack" key={post?._id}>
-                            <div className="feed-card">
-                                <div className="flex-header">
-                                    <h3>{post?.title}</h3>
-                                    {post.postedBy._id === userInfo.user._id && <i className="fas fa-trash" onClick={() => handleDelete(post._id)} />}
-                                </div>
-                                <img src={post?.photo} alt="" className="img-post" />
-                            </div>
-                        </div>
-                    )): <span>No posts found here</span>
-                    }
+                    {displayPosts}
                 </div> : <span>Posts are loading...</span>
             }
         </div>
